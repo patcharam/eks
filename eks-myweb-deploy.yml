@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myweb-deployment
+  namespace: myweb
+  labels:
+    app: myweb
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: myweb
+  template:
+    metadata:
+      labels:
+        app: myweb
+    spec:
+      containers:
+      - name: phpfpm
+        image: xxxxx.dkr.ecr.ap-southeast-1.amazonaws.com/test:v1
+        ports:
+        - containerPort: 80
