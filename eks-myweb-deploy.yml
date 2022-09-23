@@ -6,7 +6,7 @@ metadata:
   labels:
     app: myweb
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: myweb
@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: phpfpm
-        image: 104568846065.dkr.ecr.ap-southeast-1.amazonaws.com/demo:latest
+        image: 104568846065.dkr.ecr.ap-southeast-1.amazonaws.com/demo:nginx
         ports:
         - containerPort: 80
