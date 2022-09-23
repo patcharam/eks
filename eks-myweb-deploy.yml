@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: phpfpm
-        image: xxxxx.dkr.ecr.ap-southeast-1.amazonaws.com/test:v1
+        image: 104568846065.dkr.ecr.ap-southeast-1.amazonaws.com/demo:latest
         ports:
         - containerPort: 80
